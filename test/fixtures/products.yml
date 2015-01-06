@@ -13,3 +13,9 @@ two:
   text: MyString
   image_url: MyString
   price: 9.99
+
+ruby:
+  name: Pencil Set
+  summary: Premium quality pencil for sketching, drawing and writing. This pencil set includes a large selection of different grades of pencils making them the ideal drawing tool for artists and graphic designers.
+  price: 9.95
+  image_url: pencil.jpg
