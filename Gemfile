@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -43,4 +44,14 @@ gem 'haml'
 gem 'haml-rails'
 
 # Foundation for beautiful responsiveness
+gem 'rails-assets-bower-foundation'
 gem 'foundation-rails'
+
+# Guard for automation
+group :development do
+	gem 'guard'
+	gem 'guard-bundler'
+	gem 'guard-rails'
+	gem 'guard-sass'
+	gem 'guard-migrate'
+end
