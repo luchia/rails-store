@@ -1,0 +1,12 @@
+.alert-box{"data-alert" => ""}
+	=notice
+	%a.close{:href => "#"} ×
+
+%h2 Your Cart
+%ul
+	- @cart.line_items.each do |item|
+		%li= item.product.name
+
+= link_to 'Edit', edit_cart_path(@cart)
+\|
+= link_to 'Back', carts_path
