@@ -1,0 +1,28 @@
+.row
+  .small-12.large-12.columns
+    .alert-box{"data-alert" => ""}
+      =notice
+      %a.close{:href => "#"} ×
+
+    .row
+      .small-12.large-offset-10.large-2.columns
+        %br
+        %h5= link_to 'Show', @product
+        %h5= link_to 'Back', products_path
+
+    %br
+    %br
+
+    .row
+      .small-12.large-4.columns
+        %p
+          = @product.image_url
+
+        %p
+          = @product.price
+
+      .small-12.large-8.columns
+        %p
+          = @product.name
+        %p
+          = @product.summary
