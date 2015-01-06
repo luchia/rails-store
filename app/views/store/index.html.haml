@@ -1,0 +1,17 @@
+.row
+	.small-8.large-10.end.columns
+		%h1 Stationery Shop
+%br
+%br
+
+- cache ['store', Product.latest] do
+	- @products.each do |product|
+		#product
+			.row
+				.small-4.columns
+					= image_tag(product.image_url)
+				.small-8.columns
+					%h2= product.name
+					%p= sanitize(product.summary)
+					%hr
+					%h4= number_to_currency(product.price)
