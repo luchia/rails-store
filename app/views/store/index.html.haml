@@ -16,6 +16,6 @@
 					%hr
 					.row
 						.small-6.large-10.columns
-							= button_to 'Add to Cart', line_items_path(product_id: product)
+							= button_to 'Add to Cart', line_items_path(product_id: product), remote: true
 						.small-6.large-2.columns
 							%h4= number_to_currency(product.price)

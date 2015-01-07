@@ -47,11 +47,5 @@ gem 'haml-rails'
 gem 'rails-assets-bower-foundation'
 gem 'foundation-rails'
 
-# Guard for automation
-group :development do
-	gem 'guard'
-	gem 'guard-bundler'
-	gem 'guard-rails'
-	gem 'guard-sass'
-	gem 'guard-migrate'
-end
+#jQuery
+gem 'jquery-ui-rails'
