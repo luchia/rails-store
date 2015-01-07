@@ -1,10 +1,5 @@
+%h2 Your Cart
 #cart
-	.row
-		.small-9.columns
-			%h2 Your Cart
-		.small-3.columns
-			= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?' }
-	%br
 	.row
 		.small-12.columns
 			%table
@@ -12,5 +7,10 @@
 				%tr
 					%td
 					%td
-						%h4 Total:
+						%h6 Total:
 					%td= number_to_currency(@cart.total_price)
+			.row
+				.small-6.columns
+					= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?' }
+				.small-6.columns
+					= button_to 'Checkout', new_order_path, method: :get
