@@ -2,11 +2,28 @@
 	=notice
 	%a.close{:href => "#"} ×
 
-%h2 Your Cart
-%ul
-	- @cart.line_items.each do |item|
-		%li= item.product.name
-
-= link_to 'Edit', edit_cart_path(@cart)
-\|
-= link_to 'Back', carts_path
+.row
+	.small-9.columns
+		%h2 Your Cart
+	.small-3.columns
+		= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?' }
+%br
+.row
+	.small-12.columns
+		%table
+			%thead
+				%tr
+					%td
+					%td
+						%h4 Product Title
+					%td
+						%h4 Price
+				- @cart.line_items.each do |item|
+					%tr
+						%td= item.quantity
+						%td= item.product.title
+						%td=number_to_currency(item.total_price)
+				%tr
+					%td
+					%td Total:
+					%td= number_to_currency(@cart.total_price)
