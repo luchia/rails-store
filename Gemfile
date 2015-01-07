@@ -49,3 +49,12 @@ gem 'foundation-rails'
 
 #jQuery
 gem 'jquery-ui-rails'
+
+# Guard for automation
+group :development do
+	gem 'guard'
+	gem 'guard-bundler'
+	gem 'guard-migrate'
+	gem 'guard-rails'
+	gem 'guard-sass'
+end
