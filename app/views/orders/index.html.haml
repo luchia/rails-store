@@ -10,7 +10,7 @@
       %th
       %th
       %th
-      
+
   %tbody
     - @orders.each do |order|
       %tr
@@ -23,5 +23,7 @@
         %td= link_to 'Destroy', order, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
+
+= will_paginate @orders
 
 = link_to 'New Order', new_order_path

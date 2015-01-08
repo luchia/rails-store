@@ -31,7 +31,7 @@ gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -58,3 +58,6 @@ group :development do
 	gem 'guard-rails'
 	gem 'guard-sass'
 end
+
+# Pagination gem
+gem 'will_paginate'

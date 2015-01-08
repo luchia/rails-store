@@ -4,6 +4,6 @@ class StoreController < ApplicationController
   skip_before_action :authorise
 
   def index
-  	@products = Product.order(:name)
+  	@products = Product.all.paginate(page: params[:page], per_page: 2)
   end
 end
