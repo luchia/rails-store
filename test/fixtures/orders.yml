@@ -4,7 +4,7 @@ one:
   name: Rick James
   address: MyText
   email: rick@james.com
-  payment_method: PayPal
+  payment_method: Credit Card
 
 two:
   name: MyString

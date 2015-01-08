@@ -1,0 +1,9 @@
+= "Hi " + @order.name
+
+Thank you for ordering from The Shop.
+
+You ordered:
+
+= render @order.line_items
+
+Currently, your order is awaiting shipment. We'll send you another email when it has.

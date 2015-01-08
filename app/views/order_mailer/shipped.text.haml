@@ -1,0 +1,10 @@
+%h3 The Shop has shipped your order!
+
+%p We're just letting you know that we've shipped your latest order:
+
+%table
+	%tr
+		%td Qty
+		%td Description
+	%tr
+		= render @order.line_items
