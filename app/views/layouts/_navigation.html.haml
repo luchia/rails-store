@@ -7,6 +7,9 @@
 			%a{:href => "#"}
 				%span Menu
 	%section.top-bar-section
-		%ul.right
-			%li
-				Links go here
+		= if session[:user_id]
+			%ul.right
+				%li= link_to 'Orders', orders_path
+				%li= link_to 'Products', products_path
+				%li= link_to 'Users', users_path
+				%li= link_to 'Logout', logout_path

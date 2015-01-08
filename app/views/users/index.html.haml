@@ -1,0 +1,28 @@
+.row
+  .small-9.columns
+    %h1 Listing users
+  .small-3.columns
+    %br
+    = link_to 'New User', new_user_path
+
+- if notice
+  .alert-box{"data-alert" => ""}
+    =notice
+    %a.close{:href => "#"} ×
+
+%table
+  %tr
+    %th User Name
+    %th
+    %th Options
+    %th
+    %th
+
+  - @users.each do |user|
+    %tr
+      %td= user.username
+      %td
+      %td= link_to 'Show', user
+      %td= link_to 'Edit', edit_user_path(user)
+      %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+%br
