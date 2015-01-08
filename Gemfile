@@ -66,4 +66,4 @@ gem 'will_paginate'
 gem 'rails_12factor', group: :production
 
 # Set Ruby version for Heroku
-ruby '2.0.0'
+ruby '2.1.3'
