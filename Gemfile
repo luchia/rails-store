@@ -61,3 +61,9 @@ end
 
 # Pagination gem
 gem 'will_paginate'
+
+# Static Asset Serving
+gem 'rails_12factor', group: :production
+
+# Set Ruby version for Heroku
+ruby '2.0.0'
